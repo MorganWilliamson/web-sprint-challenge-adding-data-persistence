@@ -6,7 +6,7 @@ module.exports = {
     getAllResources() {
         return db('resources');
     },
-    addResource(resource) {
+    createResource(resource) {
         return db('resources').insert(resource)
             .then(([id]) => {
                 return db('resources').where('id', id);

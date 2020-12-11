@@ -3,6 +3,15 @@ const express = require('express');
 const Resource = require('./model');
 const router = express.Router();
 
+/// MIDDLEWARE ///
+const validatePost = (req, res, next) => {
+    if(!req.body.name) {
+        res.status(400).json({ message: "Please provide a valid project name (128 characters max)." });
+    } else {
+        next();
+    }
+};
+
 /// ENDPOINTS ///
 // We need to be able to: GET all resources, POST a new resource. 
 router.get('/', async (req, res) => {
@@ -18,11 +27,14 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', validatePost, async (req, res) => {
     try {
-        const contents = req.body;
-        const newResource = await Resource.createResource(contents);
-        res.status(201).json(newResource);
+        const newResource = await Resource.createResource(req.body);
+        if (newResource) {
+            res.status(201).json(newResource);
+        } else {
+            res.status(400).json({ message: "Provide a valid resource name (128 characters max)." });
+        }
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
