@@ -18,23 +18,23 @@ In this project you will be given a set of requirements and must design a databa
 
 A **project** is what needs to be done and is stored in a `projects` table. We want to store the following data about a project:
 
-- [ ] `id` - unique
-- [ ] `name` - required
-- [ ] `description` - optional
-- [ ] `completed` - cannot be `NULL` and has a default value of `false`
+- [*] `id` - unique
+- [*] `name` - required
+- [*] `description` - optional
+- [*] `completed` - cannot be `NULL` and has a default value of `false`
 
 A **resource** is anything needed to complete a project and is stored in a `resources` table. We want to store the following data about a resource:
 
-- [ ] `id` - unique
-- [ ] `name` - required and unique
-- [ ] `description` - optional
+- [*] `id` - unique
+- [*] `name` - required and unique
+- [*] `description` - optional
 
 A **task** is one of the steps needed to complete a project and is stored in a `tasks` table. We want to store the following data about a task:
 
-- [ ] `id` - unique
-- [ ] `description` - required
-- [ ] `notes` - optional
-- [ ] `completed` - cannot be `NULL` and has a default value of `false`
+- [*] `id` - unique
+- [*] `description` - required
+- [*] `notes` - optional
+- [*] `completed` - cannot be `NULL` and has a default value of `false`
 
 ### Commits
 
@@ -67,7 +67,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 Your finished project must include all of the following requirements:
 
-- [ ] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
+- [*] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
   - [*] a `project` can have multiple `tasks`.
   - [*] a `task` belongs to only one `project`.
   - [*] a `project` can use multiple `resources`. Examples of `resources` are: computer, conference room, microphone, delivery van.
