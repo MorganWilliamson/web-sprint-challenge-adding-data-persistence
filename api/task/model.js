@@ -9,7 +9,7 @@ module.exports = {
     addNewTask(task) {
         return db('tasks').insert(task)
             .then(([id]) => {
-                return db('task').where('id', id);
+                return db('tasks').where('id', id);
             });   
     }
 };

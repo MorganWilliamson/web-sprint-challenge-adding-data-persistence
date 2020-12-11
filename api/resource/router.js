@@ -6,7 +6,7 @@ const router = express.Router();
 /// MIDDLEWARE ///
 const validatePost = (req, res, next) => {
     if(!req.body.name) {
-        res.status(400).json({ message: "Please provide a valid project name (128 characters max)." });
+        res.status(400).json({ message: "Please provide a valid resource name (128 characters max)." });
     } else {
         next();
     }
