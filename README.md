@@ -72,8 +72,8 @@ Your finished project must include all of the following requirements:
   - [ ] a `task` belongs to only one `project`.
   - [ ] a `project` can use multiple `resources`. Examples of `resources` are: computer, conference room, microphone, delivery van.
   - [ ] the same `resource` can be used in multiple `projects`.
-  - [ ] when adding `projects` the client must provide a name, the description is optional.
-  - [ ] when adding `resources` the client must provide a unique name, the description is optional.
+  - [*] when adding `projects` the client must provide a name, the description is optional.
+  - [*] when adding `resources` the client must provide a unique name, the description is optional.
   - [ ] when adding a `task` the client must provide a description, the notes are optional.
   - [ ] when adding a `task` the client must provide a `project_id` that points to the `id` of an existing project.
   - [ ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
