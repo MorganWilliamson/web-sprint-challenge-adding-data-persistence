@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
         const newProject = await Project.createProject(contents);
         res.status(201).json(newProject);
     } catch (error) {
-        res.status(400).json({ message: error.message })
+        res.status(400).json({ message: error.message });
     }
 });
 

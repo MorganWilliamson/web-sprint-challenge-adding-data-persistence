@@ -10,7 +10,7 @@ module.exports = {
     createProject(project) {
         return db('projects').insert(project)
             .then(([id]) => {
-                return db('projects').where('id', id).first();
+                return db('projects').where('id', id);
             });
     }
 };
