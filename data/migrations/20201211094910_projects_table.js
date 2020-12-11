@@ -31,6 +31,7 @@ exports.up = function(knex) {
             .unsigned().notNullable()
             .references('id').inTable('resources')
             .onUpdate('restrict').onDelete('restrict');
+        tbl.primary(['project_id', 'resource_id']);
     });
 };
 
